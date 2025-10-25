@@ -1,0 +1,15 @@
+/workspaces/UnitConverter/UNITCONVERTER/Converter/bin/Debug/net8.0/Converter
+/workspaces/UnitConverter/UNITCONVERTER/Converter/bin/Debug/net8.0/Converter.deps.json
+/workspaces/UnitConverter/UNITCONVERTER/Converter/bin/Debug/net8.0/Converter.runtimeconfig.json
+/workspaces/UnitConverter/UNITCONVERTER/Converter/bin/Debug/net8.0/Converter.dll
+/workspaces/UnitConverter/UNITCONVERTER/Converter/bin/Debug/net8.0/Converter.pdb
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.AssemblyInfoInputs.cache
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.AssemblyInfo.cs
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.csproj.CoreCompileInputs.cache
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.sourcelink.json
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.dll
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/refint/Converter.dll
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.pdb
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/Converter.genruntimeconfig.cache
+/workspaces/UnitConverter/UNITCONVERTER/Converter/obj/Debug/net8.0/ref/Converter.dll

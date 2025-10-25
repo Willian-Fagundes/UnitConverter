@@ -13,7 +13,7 @@ while(isValid == true)
 	string selection = "";
 	
 	Console.WriteLine("Select the measure converter:");
-	Console.WriteLine("1. Temperature\n2. Time\n0. EXIT");
+	Console.WriteLine("1. Temperature\n2. Time\n0. Exit");
 	readResult = Console.ReadLine();
 	if(readResult != null)
 	{
@@ -51,9 +51,9 @@ while(isValid == true)
 							input = readResult;
 						}
 						if(input == "1")
-							Console.WriteLine($"\nTemperature in Fahrenheit:\n{CelsiusToFahr(temp)}");
+							Console.WriteLine($"\nTemperature in Fahrenheit:\n{(temp * 1.8) + 32}");
 						else if(input == "2")
-							Console.WriteLine($"\nTemperature in Kelvin:\n{CelsiusToKelvin(temp)}");
+							Console.WriteLine($"\nTemperature in Kelvin:\n{temp + 273.15}");
 						Console.WriteLine("\nNew Convert?\n1. Yes\n2. No");
 						readResult = Console.ReadLine();	
 						if(readResult != null)
@@ -78,9 +78,9 @@ while(isValid == true)
 							input = readResult;
 						}
 						if(input == "1")
-							Console.WriteLine($"\nTemperature in Celsius:\n{FahrToCelsius(temp)}");
+							Console.WriteLine($"\nTemperature in Celsius:\n{(temp - 32) * 1.8}");
 						else if(input == "2")
-							Console.WriteLine($"\nTemperature in Fahrenheit:\n{FahrToKelvin(temp)}");
+							Console.WriteLine($"\nTemperature in Fahrenheit:\n{((temp - 32) * 1.8) + 273.15}");
 						Console.WriteLine("\nNew Convert?\n1. Yes\n2. No");
 						readResult = Console.ReadLine();	
 						if(readResult != null)
@@ -104,10 +104,12 @@ while(isValid == true)
 						{
 							input = readResult;
 						}
-						if(input == "1")
-							Console.WriteLine($"\nTemperature in Celsius:\n{KelvinToCelsius(temp)}");
-						else if(input == "2")
-							Console.WriteLine($"\nTemperature in Fahrenheit:\n{KelvinToFahr(temp)}");
+						if (input == "1")
+							Console.WriteLine($"\nTemperature in Celsius:\n{temp - 273.15}");
+						else if (input == "2")
+							Console.WriteLine($"\nTemperature in Fahrenheit:\n{(1.8 * (temp - 273.15)) + 32}");
+
+						
 						Console.WriteLine("\nNew Convert ?\n1. Yes\n2. No");
 						readResult = Console.ReadLine();	
 						if(readResult != null)
@@ -154,17 +156,17 @@ while(isValid == true)
 						input = readResult;
 					}
 					if(input == "1")
-						Console.WriteLine($"\n{SecondsToMinutes(time)} Minutes");
+						Console.WriteLine($"\n{time / 60} Minutes");
 					else if(input == "2")
-						Console.WriteLine($"\n{SecondsToHours(time)} Hours");
+						Console.WriteLine($"\n{time / 3600} Hours");
 					else if(input == "3")
-						Console.WriteLine($"\n{SecondsToDays(time)} Days");
+						Console.WriteLine($"\n{time / 86400} Days");
 					else if(input == "4")
-						Console.WriteLine($"\n{SecondsToWeeks(time)} Months");
+						Console.WriteLine($"\n{time / 604800} Months");
 					else if(input == "5")
-						Console.WriteLine($"\n{SecondsToMonths(time)} Years");
+						Console.WriteLine($"\n{time / (86400 * 30)} Years");
 					break;
-					
+				//minutes
 				case "2":
 					Console.WriteLine("\nInsert the value in minutes:");
 					readResult = Console.ReadLine();
@@ -189,9 +191,111 @@ while(isValid == true)
 						Console.WriteLine($"{time / 10080} Weeks");
 					else if(input == "5")
 						Console.WriteLine($"{time / 43800} Months");
-					
+
 					break;
 				
+				case "3":
+					Console.WriteLine("\nInsert the value in hours:");
+					readResult = Console.ReadLine();
+					if(readResult != null)
+					{
+						time = DoubleConvert(readResult);
+					}
+					Console.WriteLine("\nSelect the value to convert to:");
+					Console.WriteLine("\n1. Seconds\n2. minutes\n3. Days\n4. Weeks\n5. Months");
+					readResult = Console.ReadLine();
+					if(readResult != null)
+					{
+						input = readResult;
+					}
+					if(input == "1")
+						Console.WriteLine($"{time * 3600} Seconds");
+					else if(input == "2")
+						Console.WriteLine($"{time *60} Minutes");
+					else if(input == "3")
+						Console.WriteLine($"{time / 24} Days");
+					else if(input == "4")
+						Console.WriteLine($"{time / 168} Weeks");
+					else if(input == "5")
+						Console.WriteLine($"{time / 730} Months");
+
+					break;
+				case "4":
+					Console.WriteLine("\nInsert the value in Days:");
+					readResult = Console.ReadLine();
+					if(readResult != null)
+					{
+						time = DoubleConvert(readResult);
+					}
+					Console.WriteLine("\nSelect the value to convert to:");
+					Console.WriteLine("\n1. Seconds\n2. minutes\n.3 Hours\n4. Weeks\n5. Months");
+					readResult = Console.ReadLine();
+					if(readResult != null)
+					{
+						input = readResult;
+					}
+					if(input == "1")
+						Console.WriteLine($"{time * 86400} Seconds");
+					else if(input == "2")
+						Console.WriteLine($"{time * 1440} Minutes");
+					else if(input == "3")
+						Console.WriteLine($"{time * 24} Hours");
+					else if(input == "4")
+						Console.WriteLine($"{time / 7} Weeks");
+					else if(input == "5")
+						Console.WriteLine($"{time / 30.417} Months");
+					
+					break;
+					case "5":
+						Console.WriteLine("\nInsert the value in Weeks:");
+						readResult = Console.ReadLine();
+						if(readResult != null)
+						{
+							time = DoubleConvert(readResult);
+						}
+						Console.WriteLine("\nSelect the value to convert to:");
+						Console.WriteLine("\n1. Seconds\n2. minutes\n.3 Hours\n4. days\n5. Months");
+						readResult = Console.ReadLine();
+						if(readResult != null)
+						{
+							input = readResult;
+						}
+						if(input == "1")
+							Console.WriteLine($"{time * 604800} Seconds");
+						else if(input == "2")
+							Console.WriteLine($"{time * 10080} Minutes");
+						else if(input == "3")
+							Console.WriteLine($"{time * 168} Hours");
+						else if(input == "4")
+							Console.WriteLine($"{time * 7} Days");
+						else if(input == "5")
+							Console.WriteLine($"{time / 4.34} Months");
+					break;
+				case "6":
+					Console.WriteLine("\nInsert the value in Months:");
+						readResult = Console.ReadLine();
+						if(readResult != null)
+						{
+							time = DoubleConvert(readResult);
+						}
+						Console.WriteLine("\nSelect the value to convert to:");
+						Console.WriteLine("\n1. Seconds\n2. minutes\n.3 Hours\n4. days\n5. Weeks");
+						readResult = Console.ReadLine();
+						if(readResult != null)
+						{
+							input = readResult;
+						}
+						if(input == "1")
+							Console.WriteLine($"{time * (86400 * 30)} Seconds");
+						else if(input == "2")
+							Console.WriteLine($"{time * 43800} Minutes");
+						else if(input == "3")
+							Console.WriteLine($"{time * 730} Hours");
+						else if(input == "4")
+							Console.WriteLine($"{time * 30.417} Days");
+						else if(input == "5")
+							Console.WriteLine($"{time * 4.34} Weeks");
+					break;
 			}
 			Console.WriteLine("1. New Measure\n2. Exit");
 			readResult = Console.ReadLine();
@@ -202,63 +306,10 @@ while(isValid == true)
 	}
 }
 
-//Metodos Temperatura
+// Metodo de conversão
 double DoubleConvert(string word)
 {
 	double val = 0;
 	bool isValid = double.TryParse(word, out val);
 	return val;
-}
-
-
-double CelsiusToFahr(double val)
-{
-	return (val * 1.8) + 32;
-}
-
-double CelsiusToKelvin(double val)
-{
-	return val + 273.15;
-}
-
-double FahrToCelsius(double val)
-{
-	return (val - 32) * 1.8;
-}
-
-double FahrToKelvin(double val)
-{
-	return FahrToCelsius(val) + 273.15;
-}
-
-double KelvinToCelsius(double val)
-{
-	return val - 273.15;
-}
-
-double KelvinToFahr(double val)
-{
-	return (1.8 * KelvinToCelsius(val)) + 32;
-}
- 
-//Metodos Tempo Seconds
-double SecondsToMinutes(double time)
-{
-	return time / 60;
-}
-double SecondsToHours(double time)
-{
-	return time / 3600;
-}
-double SecondsToDays(double time)
-{
-	return time / 86400;
-}
-double SecondsToWeeks(double time)
-{
-	return time / 604800;
-}
-double SecondsToMonths(double time)
-{
-	return time / (86400 * 30);
 }
