@@ -26,35 +26,45 @@ while(isValid == true)
 		//temperatura
 		case "1":	
 			do{
+				Console.Clear();
 				Console.WriteLine("Temperature Conversor");
 				string input = "";
 				Console.WriteLine("Select a option:");
 				Console.WriteLine("1. Celsius\n2. Fahrenheit\n3. Kelvin");
 				readResult = Console.ReadLine();
-				if(readResult != null)
+				if (readResult != null)
 				{
 					input = readResult;
 				}
+				
 				switch(input)
 				{
 					case "1":
-						Console.WriteLine("\nInsert the celsius temperature:");
+						Console.Clear();
+						Console.WriteLine("Insert the celsius temperature:");
 						readResult = Console.ReadLine();
-						if(readResult != null)
+						if (readResult != null)
 						{
 							temp = DoubleConvert(readResult);
 						}
-						Console.WriteLine("\nSelect the measure to convert to:");
-						Console.WriteLine("\n1. Fahrenheit\n2. Kelvin");
+						Console.Clear();
+						Console.WriteLine("Select the measure to convert to:");
+						Console.WriteLine("1. Fahrenheit\n2. Kelvin");
 						readResult = Console.ReadLine();
 						if(readResult != null)
 						{
 							input = readResult;
 						}
-						if(input == "1")
+						if (input == "1")
+						{
+							Console.Clear();
 							Console.WriteLine($"Temperature in Fahrenheit:\n{(temp * 1.8) + 32}");
-						else if(input == "2")
+						}
+						else if (input == "2")
+						{
+							Console.Clear();
 							Console.WriteLine($"Temperature in Kelvin:\n{temp + 273.15}");
+						}
 						Console.WriteLine("\nNew Convert?\n1. Yes\n2. No");
 						readResult = Console.ReadLine();	
 						if(readResult != null)
