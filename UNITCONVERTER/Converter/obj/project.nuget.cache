@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "it0WokbWhWE=",
+  "dgSpecHash": "2pTW2+6RWGU=",
   "success": true,
-  "projectFilePath": "/workspaces/UnitConverter/UNITCONVERTER/Converter/Converter.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\willi\\Documents\\converter\\UnitConverter\\UNITCONVERTER\\Converter\\Converter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.21\\microsoft.netcore.app.host.win-x64.8.0.21.nupkg.sha512"
+  ],
   "logs": []
 }
