@@ -11,7 +11,7 @@ while(isValid == true)
 	
 	Console.Clear();
 	Console.WriteLine("Select the measure converter:");
-	Console.WriteLine("1. Temperature\n2. Time\n3. Lenght\n0. Exit");
+	Console.WriteLine("1. Temperature\n2. Time\n3. Lenght\n4. Weight\n0. Exit");
 	readResult = Console.ReadLine();
 	if(readResult != null)
 	{
@@ -37,7 +37,11 @@ while(isValid == true)
 
 		//lenght
 		case "3":
-			LengthConverter.Exec();			
+			LengthConverter.Exec();
+			break;
+		//weight
+		case "4":
+			WeightConverter.Exec();
 			break;
 
 	}

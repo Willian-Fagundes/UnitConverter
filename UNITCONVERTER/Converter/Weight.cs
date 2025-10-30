@@ -2,7 +2,7 @@ using System.ComponentModel.Design;
 using System.Runtime.InteropServices.Marshalling;
 using ConversorMedidas;
 
-public static class Weight
+public static class WeightConverter
 {
     public static void Exec ()
     {
